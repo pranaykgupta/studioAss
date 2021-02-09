@@ -44,10 +44,14 @@
               if(isset($_SESSION['success']) && $_SESSION['success']==true){
             ?>
               <p class="fs20">Name: <?php echo $_SESSION['name']?></p>
-           
-              <p class="fs20">Type of Residence: <?php echo $_SESSION['typee']?></p>
+            <?php if($_SESSION['typee'] == 'app'){?> 
+              <p class="fs20">Type of Residence: Appartment </p>
+            <?php }else{?> 
+              <p class="fs20">Type of Residence: Plot </p>
+            <?php } ?>
+              
               <p class="fs20">Number of stories: <?php echo $_SESSION['no_floors']?></p>
-              <p class="fs20">Calculated Price: <?php echo $_SESSION['price']?></p>
+              <p class="fs20">Calculated Price: <?php echo $_SESSION['price']?> Lakhs</p>
             <?php } ?>
         </div>
         
